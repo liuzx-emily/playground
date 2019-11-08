@@ -1,0 +1,128 @@
+// ------------------- 通用 -------------------
+.xTableStyle {
+
+	// 空表格改矮一点
+	.el-table__empty-block {
+		min-height: 35px;
+	}
+
+	// 
+	.el-table__body,
+	.el-table__footer,
+	.el-table__header {
+		border-collapse: collapse;
+	}
+
+	&.el-table::before {
+		height: 0;
+	}
+}
+
+// ----------------- 颜色 -----------------
+.xTableStyle.color-common {
+
+	// 滑上变色
+	tbody tr:hover>td {
+		background: #90CAF9;
+		color: white;
+	}
+
+	// 隔行变色
+	tbody tr:not(:hover):nth-child(even) td {
+		background: #fafafa;
+	}
+
+	td,
+	th {
+		border: 1px solid #eee;
+	}
+
+	th {
+		background: #2196f3;
+		color: white;
+	}
+
+	// 排序箭头
+	.sort-caret.ascending {
+		border-bottom-color: #78b4e4;
+	}
+
+	.sort-caret.descending {
+		border-top-color: #78b4e4;
+	}
+
+	.ascending .sort-caret.ascending {
+		border-bottom-color: #fff;
+	}
+
+	.descending .sort-caret.descending {
+		border-top-color: #fff;
+	}
+}
+
+.xTableStyle.color-neat {
+
+	// 隔行变色
+	tbody tr:nth-child(even) td {
+		background: #fafafa;
+	}
+
+	td,
+	th {}
+
+	th {
+		background: #fff;
+		color: #333;
+	}
+
+	td {
+		border: none;
+	}
+
+	&.el-table:before,
+	&.el-table:after {
+		width: 0;
+	}
+}
+
+// ----------------- 大小 -----------------
+.xTableStyle.size-common {
+
+	td,
+	th {
+		padding: 8px 0;
+	}
+}
+
+.xTableStyle.size-small {
+
+	td,
+	th {
+		padding: 5px 0;
+	}
+}
+
+.xTableStyle.size-big {
+
+	td,
+	th {
+		padding: 12px 0;
+	}
+}
+
+// ----------------- 对齐方式 -----------------
+.xTableStyle.align-center {
+
+	td,
+	th {
+		text-align: center;
+	}
+}
+
+.xTableStyle.align-left {
+
+	td,
+	th {
+		text-align: left;
+	}
+}

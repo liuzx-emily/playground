@@ -1,0 +1,32 @@
+#sidebarWrap {
+    background: linear-gradient(0, @highlight_color -100%, #111 150%);
+
+    #sidebarController {
+        margin: 5px 5px 10px auto;
+        width: 20px;
+        i.fa {
+            font-size: 22px;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    #sidebarNav {
+        .name_and_controlBtn {
+            a.limitless-menu-li-name {
+                padding: 10px 0;
+                font-size: 12px;
+                color: #eee;
+                &:hover, &.router-link-active {
+                    background: @highlight_color;
+                }
+            }
+            .controlBtn {
+                top: 5px;
+                color: white;
+                color: rgba(255, 255, 255, 0.8);
+                right: 10px;
+            }
+        }
+    }
+}

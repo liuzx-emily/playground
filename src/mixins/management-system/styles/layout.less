@@ -1,0 +1,72 @@
+@sidebar_width: 200px;
+@topbar_height: 60px;
+@highlight_color: #006f89;
+
+html, body, #app {
+    height: 100%;
+}
+#topbar {
+    height: @topbar_height;
+}
+#columnContainer {
+    height: calc(100% - @topbar_height);
+}
+body {
+    min-width: 1300px;
+    font-family: "微软雅黑";
+}
+
+
+#columnContainer {
+    position: relative;
+    overflow: auto;
+    display: flex;
+    #sidebarWrap {
+        width: @sidebar_width;
+        flex-shrink: 0;
+        transition: 0.3s;
+        overflow-x: hidden;
+        overflow-y: auto;
+        #sidebarNav {
+            width: @sidebar_width;
+            display: block;
+        }
+    }
+
+    #mainContentWrap {
+        flex-grow: 1;
+        background: #fdfcfa;
+        box-sizing: border-box;
+        overflow: auto;
+        transition: 0.3s;
+
+        #mainContent {
+            margin: 10px;
+            margin-bottom: 25px;
+        }
+        address {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 12px;
+            font-style: normal;
+            background: white;
+            padding-left: 30px;
+            letter-spacing: 1px;
+            color: #333;
+            border-top: 1px solid #ccc;
+        }
+    }
+}
+
+// ------------------------------- 侧边收缩了 -------------------------------
+
+@sidebar_width_cutted: 30px;
+#columnContainer.cuttedSideBar {
+    #sidebarWrap {
+        width: @sidebar_width_cutted;
+        #sidebarNav {
+            display: none;
+        }
+    }
+}

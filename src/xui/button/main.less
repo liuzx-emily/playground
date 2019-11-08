@@ -1,0 +1,60 @@
+.x-button {
+	cursor: pointer;
+	border-radius: 4px;
+	position: relative;
+	outline: none;
+}
+.x-button+.x-button {
+	margin-left: 10px;
+}
+// 尺寸
+.x-button.size-common {
+	font-size: 12px;
+	padding: 0 12px;
+	height: 30px;
+	line-height: 30px;
+	&>i.fa {
+		font-size: 12px;
+		width: 12px;
+	}
+	i.fa+.x-button-content {
+		margin-left: 6px;
+	}
+}
+// 颜色
+.x-button.color-pretty-blue {
+	color: rgb(30, 136, 229);
+	background: rgb(250, 250, 255);
+	border: 1px solid rgb(215, 230, 255);
+	&:hover {
+		background: rgb(240, 248, 255);
+	}
+}
+.x-button.color-blue {
+	color: white;
+	background: #2196f3;
+	border: 1px solid #03a9f4;
+	&:hover {
+		background: rgb(30, 136, 229);
+	}
+}
+
+.x-button.color-pretty-green {
+	color: #46af46;
+	background: #fefefe;
+	border: 1px solid #b2dfdb;
+
+	&:hover {
+		background: #f4fdfc;
+	}
+}
+
+.x-button.color-pretty-red {
+	color: rgb(230, 30, 60);
+	background: rgb(255, 253, 250);
+	border: 1px solid rgb(255, 200, 200);
+
+	&:hover {
+		background: rgb(255, 235, 235);
+	}
+}

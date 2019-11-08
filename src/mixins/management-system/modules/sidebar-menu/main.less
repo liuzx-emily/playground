@@ -1,0 +1,36 @@
+// 浏览器默认样式重置
+ul.limitless-menu-ul, .limitless-menu-li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a.limitless-menu-li-name {
+    text-decoration: none;
+}
+// 基础样式
+.limitless-menu-li {
+    .name_and_controlBtn {
+        position: relative;
+        cursor: pointer;
+        a.limitless-menu-li-name {
+            color:black;
+            display: block;
+            // width: 100%;
+            &.router-link-exact-active, &:hover {
+                background: #4e96ef;
+            }
+            &:focus {
+                color: black
+            }
+        }
+        .controlBtn {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 5px;
+            i.fa {
+                // color: white;
+            }
+        }
+    }
+}
