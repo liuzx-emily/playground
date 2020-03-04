@@ -1,50 +1,86 @@
+<style lang="scss" scoped>
+	/deep/ .assistance {
+		background: #f5f5f5;
+		padding: 10px;
+		p {
+			font-size: 12px;
+			line-height: 1;
+		}
+		label {
+			font-size: 12px;
+			input[type="radio"] {
+				vertical-align: top;
+			}
+		}
+		pre {
+			background: #263238;
+			color: white;
+		}
+	}
+</style>
 <template>
 	<section>
-		<el-radio-group v-model="mode">
-			<el-radio :label="1">instuctions</el-radio>
-			<el-radio :label="2">basic</el-radio>
-			<el-radio :label="3">advanced</el-radio>
-			<el-radio :label="4">echarts的所有bug</el-radio>
-		</el-radio-group>
-		<section style="padding:10px 0;">
-			<instructions v-if="mode==1" />
-			<chartBasic v-if="mode==2" />
-			<chartAdvanced v-if="mode==3" />
-			<chartBug v-if="mode==4" />
-		</section>
+		<label v-for="item in componentList" :key="'label'+item.name">
+			<input type="radio" :value="item.name" v-model="mode">{{item.label}}
+		</label>
+		<component v-for="item in componentList" :key="'component'+item.name" v-bind:is="item.component" ref="charts" v-show="mode==item.name"></component>
 	</section>
 </template>
 <script>
-import Vue from 'vue'
-import echarts from 'echarts'
-import themeChick from '~/utils/echartsThemes/theme-chic.js'
-echarts.registerTheme("chic", themeChick);
-import { bind as sizeSensor, clear } from 'size-sensor';
-Vue.prototype.echarts = echarts
-Vue.prototype.chartResizeWhenWidthChange = domElement => {
-	sizeSensor(domElement, element => {
-		let echartsObj = echarts.getInstanceByDom(element);
-		if (echartsObj) {
-			echartsObj.resize();
-		}
-	});
-}
+	import Vue from 'vue'
+	import echarts from 'echarts'
+	import themeChick from '~/utils/echartsThemes/theme-chic.js'
+	echarts.registerTheme("chic", themeChick);
+	import { bind as sizeSensor, clear } from 'size-sensor';
+	Vue.prototype.echarts = echarts
+	Vue.prototype.chartResizeWhenWidthChange = domElement => {
+		sizeSensor(domElement, element => {
+			let echartsObj = echarts.getInstanceByDom(element);
+			if (echartsObj) {
+				echartsObj.resize();
+			}
+		});
+	}
 
 
+	import instructions from './instructions'
+	import chartLine from './demo/line.vue'
+	import chartBar from './demo/bar.vue'
+	import chartPie from './demo/pie.vue'
+	import chartGauge from './demo/gauge.vue'
+	import chartSunburst from './demo/sunburst.vue'
+	import chartTimeline from './demo/timeline.vue'
+	import chartManyPie from './demo/manypie.vue'
 
-import instructions from './instructions/main.vue'
-import chartBasic from './basic/main.vue'
-import chartAdvanced from './advanced/main.vue'
-import chartBug from './bug/main.vue'
-export default {
-	components: { instructions, chartBasic, chartAdvanced, chartBug },
-	data() {
-		return {
-			// 1说明 2basic 3advanced 4bug
-			mode: 2,
-		}
-	},
-	mounted() { },
-	methods: {}
-};
+	import bugTimeline from './bug/timeline.vue'
+	import bugDataset from './bug/dataset.vue'
+	import bugTree from './bug/tree.vue'
+
+	const componentList = [
+		{ component: instructions, name: "instructions", label: "说明" },
+		{ component: chartLine, name: "chartLine", label: "折线图(line area)" },
+		{ component: chartBar, name: "chartBar", label: "柱状图(bar stack)" },
+		{ component: chartPie, name: "chartPie", label: "饼图" },
+		{ component: chartGauge, name: "chartGauge", label: "仪表盘" },
+		{ component: chartSunburst, name: "chartSunburst", label: "旭日图" },
+		{ component: chartTimeline, name: "chartTimeline", label: "【复杂】timeline" },
+		{ component: chartManyPie, name: "chartManyPie", label: "【复杂】many pie" },
+		{ component: bugTimeline, name: "bugTimeline", label: "【bug】timeline" },
+		{ component: bugDataset, name: "bugDataset", label: "【bug】dataset" },
+		{ component: bugTree, name: "bugTree", label: "【bug】tree" },
+	];
+
+	const registerComponents = {};
+	componentList.forEach(c => {
+		registerComponents[c.name] = c.component;
+	})
+	export default {
+		components: registerComponents,
+		data() {
+			return {
+				mode: componentList[0].name,
+				componentList,
+			}
+		},
+	};
 </script>

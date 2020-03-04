@@ -49,7 +49,7 @@ module.exports = {
 	// 解决开发阶段跨域问题
 	devServer: {
 		// 端口号
-		port: "9446",
+		port: "8865",
 		proxy: {
 			'/api': {
 				target: 'http://localhost:3526/',

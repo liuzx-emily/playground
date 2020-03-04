@@ -17,7 +17,7 @@
 <template>
 	<section>
 		使用<a href="https://github.com/kamranahmedse/driver.js" target="_blank" id="aaaaaa">driver.js </a>
-		<el-button type="primary" @click.prevent.stop="showGuide">显示教程</el-button>
+		<button type="button" @click.prevent.stop="showGuide">显示教程</button>
 	</section>
 </template>
 <script>

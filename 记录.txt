@@ -10,11 +10,3 @@ echarts 4.2.1
 components
   horizontalscrolling
   tree
-
-
-记录：
-
-
-2 仪表盘不同段的颜色，color 的最后一个必须是1，不然表盘会长一块
-3 算是echarts的bug吧 ：一张图上有多个line，如果给每个series设置了 itemStyle.color ，legend颜色就疯了
-4 xtools中添加方法 getBetweenDays 并且优化一下

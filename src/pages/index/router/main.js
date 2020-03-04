@@ -14,20 +14,20 @@ const routes = [{
     component: () => import('~/pages/index/views/03dragAndResize/main.vue')
 },
 {
-    path: "/dragToDelete",
-    component: () => import('~/pages/index/views/04dragToDelete/main.vue')
+    path: "/svg",
+    component: () => import('~/pages/index/views/17svg/main.vue')
 },
 {
-    path: "/wave",
-    component: () => import('~/pages/index/views/05wave/main.vue')
+    path: "/cssMagician",
+    component: () => import('~/pages/index/views/05cssMagician/main.vue')
+},
+{
+    path: "/greetingInSnow",
+    component: () => import('~/pages/index/views/13greetingInSnow/main.vue')
 },
 {
     path: "/calendar",
     component: () => import('~/pages/index/views/06calendar/main.vue')
-},
-{
-    path: "/computeFileMd5",
-    component: () => import('~/pages/index/views/07computeFileMd5/main.vue')
 },
 {
     path: "/horizontalScrolling",
@@ -48,10 +48,6 @@ const routes = [{
 {
     path: "/exportPDF",
     component: () => import('~/pages/index/views/12exportPDF/main.vue')
-},
-{
-    path: "/cssmadeShape",
-    component: () => import('~/pages/index/views/13cssmadeShape/main.vue')
 },
 {
     path: "/manyLevelAddress",

@@ -1,3 +1,31 @@
+<style lang="scss">
+	.demo-left {
+		display: inline-block;
+		vertical-align: top;
+		width: 300px;
+		box-sizing: border-box;
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: black;
+			padding: 10px 0;
+			border-bottom: 2px solid #eee;
+
+			&.router-link-active {
+				background: burlywood;
+			}
+		}
+	}
+
+	.demo-right {
+		display: inline-block;
+		width: calc(100% - 300px);
+	}
+	span {
+		display: inline-block;
+	}
+</style>
 <template>
 	<div id="app">
 		<nav class="demo-left">
@@ -7,32 +35,27 @@
 	</div>
 </template>
 <script>
-export default {
-	data() {
-		return {
-			navList: [
-				{ name: "云朵", code: "/canvasCloud" },
-				{ name: "画板", code: "/painting" },
-				{ name: "图片处理", code: "/photoEditing" },
-				{ name: "dragAndResize", code: "/dragAndResize" },
-				{ name: "拖拽刪除", code: "/dragToDelete" },
-				{ name: "波浪~", code: "/wave" },
-				{ name: "日历组件", code: "/calendar" },
-				{ name: "计算文件md5", code: "/computeFileMd5" },
-				{ name: "横向滚动", code: "/horizontalScrolling" },
-				{ name: "echarts", code: "/echartsDemo" },
-        // 
-				{ name: "引导教程", code: "/guide" },
-				{ name: "打印", code: "/print" },
-				{ name: "导出pdf", code: "/exportPDF" },
-				{ name: "cssmadeShape", code: "/cssmadeShape" },
-				{ name: "多级地址组件", code: "/manyLevelAddress" },
-				{ name: "console", code: "/console" },
-			],
-		};
-	},
-	methods: {
-
-	}
-};
+	export default {
+		data() {
+			return {
+				navList: [
+					{ name: "css 各种神奇效果", code: "/cssMagician" },
+					{ name: "css 雪中的问候", code: "/greetingInSnow" },
+					{ name: "canvas 云朵", code: "/canvasCloud" },
+					{ name: "canvas 画板", code: "/painting" },
+					{ name: "canvas 图片处理", code: "/photoEditing" },
+					{ name: "echarts", code: "/echartsDemo" },
+					{ name: "横向滚动", code: "/horizontalScrolling" },
+					{ name: "打印局部", code: "/print" },
+					{ name: "导出pdf", code: "/exportPDF" },
+					{ name: "多级地址组件", code: "/manyLevelAddress" },
+					{ name: "console（已经掌握了）", code: "/console" },
+					{ name: "svg（未完成）", code: "/svg" },
+					{ name: "日历组件（未完成）", code: "/calendar" },
+					{ name: "引导教程（未完成）", code: "/guide" },
+					{ name: "dragAndResize（未完成）", code: "/dragAndResize" },
+				],
+			};
+		},
+	};
 </script>

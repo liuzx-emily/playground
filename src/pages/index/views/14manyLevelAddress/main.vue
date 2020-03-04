@@ -1,23 +1,18 @@
-<style scoped></style>
+<style lang="scss" scoped>
+	section/deep/ {
+		font-size: 12px;
+	}
+</style>
 <template>
-    <section>
-        <jqueryVersion />
-        <vueVersion />
-    </section>
+	<section>
+		<usingSelect />
+		<usingElSelect />
+	</section>
 </template>
 <script>
-import jqueryVersion from './modules/01jqueryVersion.vue'
-import vueVersion from './modules/02vueVersion.vue'
-export default {
-    props: {},
-    components: { jqueryVersion, vueVersion, },
-    data() {
-        return {}
-    },
-    computed: {},
-    watch: {},
-    created() {},
-    mounted() {},
-    methods: {}
-};
+	import usingSelect from './usingSelect/main.vue'
+	import usingElSelect from './usingElSelect/main.vue'
+	export default {
+		components: { usingSelect, usingElSelect },
+	};
 </script>

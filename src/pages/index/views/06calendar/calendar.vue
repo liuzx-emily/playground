@@ -31,7 +31,6 @@
 			}
 			&:not(.thisMonth) {
 				color: #ccc;
-
 			}
 		}
 	}
