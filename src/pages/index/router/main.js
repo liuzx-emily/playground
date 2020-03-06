@@ -50,6 +50,10 @@ const routes = [{
     component: () => import('~/pages/index/views/12exportPDF/main.vue')
 },
 {
+    path: "/exportExcel",
+    component: () => import('~/pages/index/views/exportExcel/main.vue')
+},
+{
     path: "/manyLevelAddress",
     component: () => import('~/pages/index/views/14manyLevelAddress/main.vue')
 },

@@ -48,6 +48,7 @@
 					{ name: "横向滚动", code: "/horizontalScrolling" },
 					{ name: "打印局部", code: "/print" },
 					{ name: "导出pdf", code: "/exportPDF" },
+					{ name: "导出excel", code: "/exportExcel" },
 					{ name: "多级地址组件", code: "/manyLevelAddress" },
 					{ name: "console（已经掌握了）", code: "/console" },
 					{ name: "svg（未完成）", code: "/svg" },
