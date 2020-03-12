@@ -47,6 +47,7 @@
 	import chartLine from './demo/line.vue'
 	import chartBar from './demo/bar.vue'
 	import chartPie from './demo/pie.vue'
+	import chartDoublePie from './demo/doublePie.vue'
 	import chartGauge from './demo/gauge.vue'
 	import chartSunburst from './demo/sunburst.vue'
 	import chartTimeline from './demo/timeline.vue'
@@ -58,14 +59,15 @@
 
 	const componentList = [
 		{ component: instructions, name: "instructions", label: "说明" },
-		{ component: chartLine, name: "chartLine", label: "折线图(line area)" },
-		{ component: chartBar, name: "chartBar", label: "柱状图(bar stack)" },
-		{ component: chartPie, name: "chartPie", label: "饼图" },
+		{ component: chartLine, name: "chartLine", label: "折线(line area)" },
+		{ component: chartBar, name: "chartBar", label: "柱(bar stack)" },
+		{ component: chartPie, name: "chartPie", label: "饼" },
+		{ component: chartDoublePie, name: "chartDoublePie", label: "嵌套饼" },
 		{ component: chartGauge, name: "chartGauge", label: "仪表盘" },
 		{ component: chartSunburst, name: "chartSunburst", label: "旭日图" },
-		{ component: chartTimeline, name: "chartTimeline", label: "【复杂】timeline" },
-		{ component: chartManyPie, name: "chartManyPie", label: "【复杂】many pie" },
-		{ component: bugTimeline, name: "bugTimeline", label: "【bug】timeline" },
+		{ component: chartTimeline, name: "chartTimeline", label: "timeline" },
+		{ component: chartManyPie, name: "chartManyPie", label: "many pie" },
+		{ component: bugTimeline, name: "bugTimeline", label: "timeline" },
 		{ component: bugDataset, name: "bugDataset", label: "【bug】dataset" },
 		{ component: bugTree, name: "bugTree", label: "【bug】tree" },
 	];
