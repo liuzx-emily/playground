@@ -49,6 +49,7 @@
 	import chartPie from './demo/pie.vue'
 	import chartDoublePie from './demo/doublePie.vue'
 	import chartGauge from './demo/gauge.vue'
+	import chartCircleProgress from './demo/gauge进度条.vue'
 	import chartSunburst from './demo/sunburst.vue'
 	import chartTimeline from './demo/timeline.vue'
 	import chartManyPie from './demo/manypie.vue'
@@ -61,9 +62,10 @@
 		{ component: instructions, name: "instructions", label: "说明" },
 		{ component: chartLine, name: "chartLine", label: "折线(line area)" },
 		{ component: chartBar, name: "chartBar", label: "柱(bar stack)" },
-		{ component: chartPie, name: "chartPie", label: "饼" },
+		{ component: chartPie, name: "chartPie", label: "pie" },
 		{ component: chartDoublePie, name: "chartDoublePie", label: "嵌套饼" },
-		{ component: chartGauge, name: "chartGauge", label: "仪表盘" },
+		{ component: chartGauge, name: "chartGauge", label: "gauge" },
+		{ component: chartCircleProgress, name: "chartCircleProgress", label: "gauge进度条" },
 		{ component: chartSunburst, name: "chartSunburst", label: "旭日图" },
 		{ component: chartTimeline, name: "chartTimeline", label: "timeline" },
 		{ component: chartManyPie, name: "chartManyPie", label: "many pie" },
