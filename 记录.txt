@@ -10,3 +10,7 @@ echarts 4.2.1
 components
   horizontalscrolling
   tree
+
+vuetify
+https://vuetifyjs.com/zh-Hans/introduction/why-vuetify/
+
