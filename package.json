@@ -19,7 +19,7 @@
 		"file-saver": "^2.0.2",
 		"font-awesome": "4.7.0",
 		"html2canvas": "1.0.0-rc.3",
-		"jquery": "3.4.1",
+		"jquery": "3.5.0",
 		"jspdf": "1.5.3",
 		"less": "3.10.3",
 		"less-loader": "5.0.0",
