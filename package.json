@@ -23,7 +23,7 @@
 		"jspdf": "1.5.3",
 		"less": "3.10.3",
 		"less-loader": "5.0.0",
-		"lodash": "4.17.15",
+		"lodash": "4.17.19",
 		"size-sensor": "0.2.2",
 		"vue": "2.6.10",
 		"vue-awesome-swiper": "3.1.3",
