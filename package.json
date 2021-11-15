@@ -15,7 +15,7 @@
     "file-saver": "^2.0.5",
     "font-awesome": "^4.7.0",
     "html2canvas": "1.0.0-rc.3",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "jspdf": "^2.4.0",
     "less": "^4.1.2",
     "lodash": "^4.17.21",
