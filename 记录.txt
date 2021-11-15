@@ -4,13 +4,5 @@ element 2.7.2 -> 2.11.1 ->
 size-sensor 0.2.2（绝对不要升级！）
 vue-router 3.1.2
 less 3.9.0
-echarts 4.2.1
-
-
-components
-  horizontalscrolling
-  tree
-
-vuetify
-https://vuetifyjs.com/zh-Hans/introduction/why-vuetify/
-
+echarts 4.2.1 
+ 

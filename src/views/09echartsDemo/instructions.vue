@@ -1,15 +1,30 @@
 <template>
-	<section class="assistance">
-		<p>配色：<span v-for="color in colorArr" :key="color" :style="{background:color}" style="width:50px;height:20px"></span></p>
-		<p>1 如果同一个图表组件在页面中多个地方都调用了，那么一定要注意id不能重复</p>
-		<p>2 如果图表在 tabs 中，那么不可以一上来就 init 所有图表，因为此时处于隐藏状态的的 tab 中会取不到 DOM 元素。解决方法：页面加载时，只 init 当前激活的页签的图表。每次切换页签时，init 相应的图</p>
-		<p>3 使用 size-sensor 包监听 chart 容器宽度的变化。在 mounted 中调用<code>chartResizeWhenWidthChange</code>方法（size-sensor的版本锁定为0.2.2，后续版本有 bug）</p>
-		<section>
-			<label><input type="radio" value="1" v-model="settingsDemo">坐标轴设置</label>
-			<label><input type="radio" value="2" v-model="settingsDemo">lineStyle</label>
-			<label><input type="radio" value="3" v-model="settingsDemo">grid</label>
-			<label><input type="radio" value="4" v-model="settingsDemo">legend</label>
-			<pre v-show="settingsDemo==1">
+  <section class="assistance">
+    <p>
+      配色：<span
+        v-for="color in colorArr"
+        :key="color"
+        :style="{ background: color }"
+        style="width: 50px; height: 20px"
+      ></span>
+    </p>
+    <p>1 如果同一个图表组件在页面中多个地方都调用了，那么一定要注意id不能重复</p>
+    <p>
+      2 如果图表在 tabs 中，那么不可以一上来就 init 所有图表，因为此时处于隐藏状态的的 tab
+      中会取不到 DOM 元素。解决方法：页面加载时，只 init 当前激活的页签的图表。每次切换页签时，init
+      相应的图
+    </p>
+    <p>
+      3 使用 size-sensor 包监听 chart 容器宽度的变化。在 mounted
+      中调用<code>chartResizeWhenWidthChange</code>方法（size-sensor的版本锁定为0.2.2，后续版本有
+      bug）
+    </p>
+    <section>
+      <label><input type="radio" value="1" v-model="settingsDemo" />坐标轴设置</label>
+      <label><input type="radio" value="2" v-model="settingsDemo" />lineStyle</label>
+      <label><input type="radio" value="3" v-model="settingsDemo" />grid</label>
+      <label><input type="radio" value="4" v-model="settingsDemo" />legend</label>
+      <pre v-show="settingsDemo == 1">
       1 type：坐标轴类型。
           category ：类目轴，适用于离散的类目数据，为该类型时必须通过 data 设置类目数据。
           value ：数值轴，适用于连续数据。
@@ -26,7 +41,7 @@
           只在数值轴或时间轴中（type: 'value' 或 'time'）有效。
           例如可以设置成1保证坐标轴分割刻度显示成整数。
       </pre>
-			<pre v-show="settingsDemo==2">
+      <pre v-show="settingsDemo == 2">
         // 线条样式
         lineStyle: {
             // 线的颜色【可以做线性渐变、径向渐变和纹理填充】
@@ -45,7 +60,7 @@
             shadowOffsetY: 0,
         },
       </pre>
-			<pre v-show="settingsDemo==3">
+      <pre v-show="settingsDemo == 3">
         grid: {
             // grid左上角位置：默认80 60
             x: 80,
@@ -55,7 +70,7 @@
             y2: 80,
         },
       </pre>
-			<pre v-show="settingsDemo==4">
+      <pre v-show="settingsDemo == 4">
         // 图例
         legend: {
             show: true,
@@ -83,7 +98,7 @@
             borderWidth: 5
         },
       </pre>
-			<pre v-show="settingsDemo==5">
+      <pre v-show="settingsDemo == 5">
         // 提示框
         tooltip: {
             /*
@@ -100,16 +115,30 @@
             }
         },
       </pre>
-		</section>
-	</section>
+    </section>
+  </section>
 </template>
 <script>
-	export default {
-		data() {
-			return {
-				settingsDemo: "1",
-				colorArr: ["#ff7576", "#ffba75", "#75bbff", "#4ce297", "#01a6a6", "#fbc533", "#f89046", "#aad571", "#33cca1", "#3585f6", "#9575cd", "#FB8C00", "#D84315", ],
-			}
-		}
-	};
+export default {
+  data() {
+    return {
+      settingsDemo: "1",
+      colorArr: [
+        "#ff7576",
+        "#ffba75",
+        "#75bbff",
+        "#4ce297",
+        "#01a6a6",
+        "#fbc533",
+        "#f89046",
+        "#aad571",
+        "#33cca1",
+        "#3585f6",
+        "#9575cd",
+        "#FB8C00",
+        "#D84315",
+      ],
+    };
+  },
+};
 </script>

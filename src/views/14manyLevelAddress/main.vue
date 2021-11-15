@@ -1,18 +1,18 @@
 <style lang="scss" scoped>
-	section/deep/ {
-		font-size: 12px;
-	}
+section:v-deep {
+  font-size: 12px;
+}
 </style>
 <template>
-	<section>
-		<usingSelect />
-		<usingElSelect />
-	</section>
+  <section>
+    <usingSelect />
+    <usingElSelect />
+  </section>
 </template>
 <script>
-	import usingSelect from './usingSelect/main.vue'
-	import usingElSelect from './usingElSelect/main.vue'
-	export default {
-		components: { usingSelect, usingElSelect },
-	};
+import usingSelect from "./usingSelect/main.vue";
+import usingElSelect from "./usingElSelect/main.vue";
+export default {
+  components: { usingSelect, usingElSelect },
+};
 </script>
