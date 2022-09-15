@@ -34,7 +34,7 @@ span {
 <template>
   <div id="app">
     <nav class="demo-left">
-      <router-link v-for="item in $root.navList" :key="item.code" :to="item.code">{{
+      <router-link v-for="item in $root.navList" :key="item.path" :to="item.path">{{
         item.name
       }}</router-link>
     </nav>
