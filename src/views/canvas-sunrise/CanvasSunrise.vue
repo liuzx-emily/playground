@@ -1,7 +1,6 @@
 <style lang="scss" scoped>
 canvas {
   box-shadow: 0 0 3px 0 #bac;
-  margin: 10px auto 0;
   display: block;
 }
 </style>
