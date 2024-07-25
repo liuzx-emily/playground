@@ -25,7 +25,8 @@ export const menus = [
   { name: "连连看", path: "/link-game", component: LinkGame },
 ];
 
-const routes = [];
+const routes = [{ path: "/", redirect: "/link-game" }];
+
 walkThroughTree(menus, (menu) => {
   if (menu.path && menu.component) {
     routes.push({
