@@ -144,6 +144,11 @@ function handleClickHint() {
 </script>
 
 <template>
+  <p>
+    <a href="https://liuzx-emily.github.io/blog/#/post/7fdb72d6-180c-4ef2-9d0e-08358f7c3364">
+      《p5.js 写个连连看》
+    </a>
+  </p>
   <section style="width: 320px">
     <section class="controls">
       <input type="button" value="洗牌" @click="shuffleGame" />
@@ -151,7 +156,6 @@ function handleClickHint() {
       <input type="button" value="新游戏" @click="newGame" />
     </section>
     <div id="target"></div>
-    <p>（用 p5）</p>
   </section>
 </template>
 <style lang="scss" scoped>

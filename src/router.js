@@ -8,6 +8,7 @@ import CssMagician from "./views/css-magician";
 import LifeGame from "./views/life-game";
 import WuZiQi from "./views/wu-zi-qi";
 import LinkGame from "./views/link-game";
+import SuperUploader from "./views/super-uploader";
 
 export const menus = [
   {
@@ -23,6 +24,7 @@ export const menus = [
   { name: "康威生命游戏", path: "/life-game", component: LifeGame },
   { name: "五子棋", path: "/wu-zi-qi", component: WuZiQi },
   { name: "连连看", path: "/link-game", component: LinkGame },
+  { name: "Super Uploader", path: "/super-uploader", component: SuperUploader },
 ];
 
 const routes = [{ path: "/", redirect: "/link-game" }];
